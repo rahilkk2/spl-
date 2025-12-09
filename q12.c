@@ -7,27 +7,20 @@ b) Read and store details of a single employee
 c) Display employee information
 */
 
+
+
 #include <stdio.h>
 
-struct Employee {
-    int id;
-    char name[50];
-    char dept[50];
-    float salary;
-};
-
 int main() {
-    struct Employee e;
 
-    printf("Enter ID, Name, Department, Salary:\n");
-    scanf("%d", &e.id);
-    while(getchar()!='\n'); // clear buffer
-    gets(e.name);
-    gets(e.dept);
-    scanf("%f", &e.salary);
+int id; char name [50], dept [50]; float sal;
 
-    printf("\nEmployee Details:\n");
-    printf("ID: %d\nName: %s\nDepartment: %s\nSalary: %.2f\n", e.id, e.name, e.dept, e.salary);
+printf("ID: "); scanf("%d", &id);
+printf("Name: "); scanf("%s", name);
+printf("Dept: "); scanf("%s", dept);
+printf("Salary: "); scanf("%f", &sal);
+printf("\n--Info\nID: %d\nName: %s\nDept: %s\nSalary: %.2f\n",
+id, name, dept, sal);
 
-    return 0;
 }
+
